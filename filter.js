@@ -28,7 +28,7 @@ const fetch = require('node-fetch');
 async function test() {
 
     //LOCATION:
-    address = '121+Eastvale+Drive,+Markham,+ON,+L3S0B3';//Some user input string
+    address = '';//Some user input string
 
     //const location = await fetch()
 
