@@ -1,5 +1,4 @@
 import React from 'react';
-import './SwipeButtons.css';
 import * as Io5Icons from "react-icons/io5";
 import * as IoIcons from "react-icons/io";
 import { IconButton } from '@material-ui/core';
