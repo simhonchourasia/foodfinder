@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 import TinderCard from "react-tinder-card";
 import './TinderCards.css';
-import './SwipeButtons.css';
 import * as Io5Icons from "react-icons/io5";
 import * as IoIcons from "react-icons/io";
 import { IconButton } from '@material-ui/core';
