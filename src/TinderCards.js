@@ -14,10 +14,10 @@ export default class TinderCards extends Component {
         super(props);
         this.swipeLeft = this.swipeLeft.bind(this);
         this.swipeRight = this.swipeRight.bind(this);
-        // HARDCODED userId (username: A)
-        // this.state = {userId: '60035e9a8d49d4244ce91aa5', items: []};
-        // HARDCODED userId (username: B)
-        this.state = {userId: '6003628a8b67ff0e6097dd36', items: []};
+        // HARDCODED userId (username: Albert)
+        //this.state = {userId: '6003c1d0f391200b6cfaa7dc', items: []};
+        // HARDCODED userId (username: Barbara)
+        this.state = {userId: '6003c1e5f391200b6cfaa7dd', items: []};
     }
 
     componentDidMount() {
@@ -39,7 +39,7 @@ export default class TinderCards extends Component {
         console.log(this.state);
         axios.post('http://localhost:5000/items/swipe/' + id, {swiped: 'left'})
             .then(res=>console.log(res.data));
-        axios.post('http://localhost:5000/users/userswipe/' + this.state.userId, {movieId: id, swipe: 'left'})
+        axios.post('http://localhost:5000/users/userswipe/' + this.state.userId, {restaurantId: id, swipe: 'left'})
             .then(res=>console.log(res.data))
         this.forceUpdate();
     }
@@ -53,7 +53,7 @@ export default class TinderCards extends Component {
         console.log(this.state);
         axios.post('http://localhost:5000/items/swipe/' + id, {swiped: 'right'})
             .then(res=>console.log(res.data));
-        axios.post('http://localhost:5000/users/userswipe/' + this.state.userId, {movieId: id, swipe: 'right'})
+        axios.post('http://localhost:5000/users/userswipe/' + this.state.userId, {restaurantId: id, swipe: 'right'})
             .then(res=>console.log(res.data))
         this.forceUpdate();
     }
@@ -63,7 +63,7 @@ export default class TinderCards extends Component {
         console.log(direction);
         if (direction === 'left') this.swipeLeft(id);
         if (direction === 'right') this.swipeRight(id);
-        console.log(this.state);
+        //console.log(this.state);
     };
 
     outOfFrame(name) {
@@ -78,14 +78,14 @@ export default class TinderCards extends Component {
                 className="swipe"
                 key={item.name}
                 preventSwipe={["up", "down"]}
-                onSwipe = {(dir) => this.swiped(dir, item._id, item.name)}
-                onCardLeftScreen={() => this.outOfFrame(item.name)}
+                onSwipe = {(dir) => this.swiped(dir, item._id, item.restaurant_name)}
+                onCardLeftScreen={() => this.outOfFrame(item.restaurant_name)}
                 >
                     <div 
-                    style = {{backgroundImage: `url(${item.imgUrl})` }}
+                    style = {{backgroundImage: `url(${item.image_url})` }}
                     className="card">
-                        <h3>{item.name}</h3>
-                        <p className='description'>{item.description}</p>
+                        <h3>{item.restaurant_name}</h3>
+                        <p className='description'>{item.rating}</p>
                     </div>
 
                 </TinderCard>
