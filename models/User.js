@@ -7,7 +7,9 @@ const UserSchema = new Schema({
     liked: {type: Array, required: true, default: []},
     swipedOn: {type: Array, required: true, default: []},
     
-    partner: {type: String, required: true}
+    partnerEmail: {type: String, required: true}, 
+    email: {type: String, required: true},
+    password: {type: String, required: true}
 }, {timestamps: true});
 
 const User = mongoose.model('User', UserSchema);
