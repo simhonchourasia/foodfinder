@@ -30,12 +30,13 @@ form:after {
   bottom: -5px;
   background-image: linear-gradient(
     to bottom right,
-    rgb(186, 109, 109),
+    rgb(197, 115, 115),
     rgb(61, 45, 67)
   );
 }
 
 form .form-inner {
+  border-radius: 15px;
   position: relative;
   display: block;
   background-color: rgb(255, 255, 255);
@@ -86,6 +87,7 @@ form .form-inner .form-group input:focus {
 }
 
 form .form-inner input[type="submit"] {
+  border-radius: 10px;
   display: inline-block;
   padding: 10px 15px;
   border-bottom: 8px;
@@ -95,10 +97,11 @@ form .form-inner input[type="submit"] {
 }
 
 form .form-inner input[type="submit"]:hover {
-  background-color: purple;
+  background-color: #96417e;
 }
 
 .login {
+  border-radius: 20px;
   margin-top: -40px;
   padding-top: -30;
   font-size: 1.7rem;
