@@ -16,3 +16,11 @@
   justify-content: center;
   font-size: 3rem;
 }
+
+.home {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(214, 113, 113, 0.886),
+    rgb(101, 151, 122)
+  );
+}
