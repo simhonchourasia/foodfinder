@@ -5,7 +5,8 @@ export default class Matches extends Component{
     constructor(props) {
         super(props);
         // HARDCODED userId (username: A)
-        this.state = {userId: '60035e9a8d49d4244ce91aa5', items: []};
+        // DYLAN
+        this.state = {userId: '6003c1d0f391200b6cfaa7dc', items: []};
     }
 
     componentDidMount() {
@@ -23,7 +24,7 @@ export default class Matches extends Component{
                 console.log(res1.data);
                 axios.get('http://localhost:5000/items/')
                     .then(res2=>{
-                        console.log(res2.data)
+                        //console.log(res2.data)
                         const matches = res2.data.filter(x=>res1.data.includes(x._id));
                         console.log(matches);
                         this.setState({items: matches});
@@ -40,7 +41,10 @@ export default class Matches extends Component{
             </h1>
             
             {this.state.items.map(item=>{
-                return <h4>{item.name} | {item.description}</h4>
+                return (<div>
+                    <h4>{item.restaurant_name} | {item.rating} | {item.price} | {item.restaurant_url}</h4>
+                    <img src={item.image_url} alt=''/>
+                </div>)
             })}
             
         </div>
