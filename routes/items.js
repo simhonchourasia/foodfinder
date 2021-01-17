@@ -9,12 +9,15 @@ router.route('/').get((req, res)=>{
 });
 
 router.route('/add').post((req, res)=>{
-    const name = req.body.name;
-    const description = req.body.description;
-    const imgUrl = req.body.imgUrl;
-    const swiped = req.body.swiped;
+    const restaurant_name = req.body.restaurant_name;
+    const rating = req.body.rating;
+    const address = req.body.address;
+    const price = req.body.price;
+    const image_url = req.body.image_url;
+    const restaurant_url = req.body.restaurant_url;
+    const restaurant_phone_number = req.body.restaurant_phone_number;
     
-    const newItem = new Item({name, description, imgUrl, swiped});
+    const newItem = new Item({restaurant_name, rating, address, price, image_url, restaurant_url, restaurant_phone_number});
     
     newItem.save()
         .then(()=>res.json('Item added! '))
@@ -32,9 +35,13 @@ router.route('/update/:id').post((req, res)=>{
     console.log(req.params)
     Item.findById(req.params.id)
         .then(item=>{
-            item.name = req.body.name;
-            item.description = req.body.description;
-            item.imgUrl = req.body.imgUrl;
+            item.restaurant_name = req.body.restaurant_name;
+            item.rating = req.body.rating;
+            item.address = req.body.address;
+            item.price = req.body.price;
+            item.image_url = req.body.image_url;
+            item.restaurant_url = req.body.restaurant_url;
+            item.restaurant_phone_number = req.body.restaurant_phone_number;
             item.swiped = req.body.swiped;
 
             item.save()
