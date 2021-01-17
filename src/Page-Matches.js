@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios';
+import './Page-Matches.css'
 
 export default class Matches extends Component{
     constructor(props) {
@@ -40,13 +41,14 @@ export default class Matches extends Component{
                 Matches
             </h1>
             
-            {this.state.items.map(item=>{
-                return (<div>
-                    <h4>{item.restaurant_name} | {item.rating} | {item.price} | {item.restaurant_url}</h4>
-                    <img src={item.image_url} alt=''/>
-                </div>)
-            })}
-            
+            <div class="tiles">
+                {this.state.items.map(item=>{
+                    return (<div className='tile'>
+                        <h4>{item.restaurant_name} | {item.rating} | {item.price} | {item.restaurant_url}</h4>
+                        <img src={item.image_url} alt=''/>
+                    </div>)
+                })}
+            </div>
         </div>
     )}
 }
