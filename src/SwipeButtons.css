@@ -1,0 +1,36 @@
+.swipeButtons {
+  position: fixed;
+  bottom: 10vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.swipeButtons .MuiIconButton-root {
+  background-color: white;
+  box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.45) !important;
+}
+
+.theX {
+  width: 65px;
+  height: 63px;
+  font-size: 4rem;
+}
+
+.theHeart {
+  width: 65px;
+  height: 62px;
+  font-size: 3.9rem;
+}
+
+.swipeButtons__left {
+  padding: 3vw !important;
+  display: flex;
+  color: #ec5e6f !important;
+}
+
+.swipeButtons__right {
+  padding: 3vw !important;
+  fill: aquamarine;
+  color: #55c16e;
+}

@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+input,
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+form {
+  display: block;
+  position: fixed;
+}
+
+form:after {
+  margin-top: 80px;
+  content: "";
+  display: flex;
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(186, 109, 109),
+    rgb(61, 45, 67)
+  );
+}
+
+form .form-inner {
+  position: relative;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  z-index: 2;
+}
+
+/* THE LOGIN */
+form .form-inner h2 {
+  color: rgb(79, 26, 26);
+  font-size: 3.4rem;
+  font-weight: 500;
+  margin-bottom: auto;
+}
+
+form .form-inner .form-group {
+  display: block;
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+/* EMAIL PASSWORD ADDRESS */
+.form-inner .form-group label {
+  display: block;
+  color: rgb(108, 43, 43);
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  transition: 0.4s;
+}
+
+.form-inner .form-group:focus-within label {
+  color: rgb(238, 0, 0);
+}
+
+form .form-inner .form-group input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: rgb(211, 184, 184);
+  border-radius: 8px;
+  transition: 0.4s;
+}
+
+form .form-inner .form-group input:focus {
+  box-shadow: 0px 15px 15px 0px rgba(87, 15, 15, 0.3);
+}
+
+form .form-inner input[type="submit"] {
+  display: inline-block;
+  padding: 10px 15px;
+  border-bottom: 8px;
+  background-size: 200%;
+  background: #502435;
+  color: rgb(255, 255, 255);
+}
+
+form .form-inner input[type="submit"]:hover {
+  background-color: purple;
+}
+
+.login {
+  margin-top: -40px;
+  padding-top: -30;
+  font-size: 1.7rem;
+  color: #502435;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
