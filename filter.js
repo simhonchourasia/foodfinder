@@ -33,11 +33,10 @@ async function rest_data() {
     var rating = new Array(business.length);
     var address = new Array(business.length);
     var price = new Array(business.length);
-    var catagories = new Array(business.length);
     var image_url = new Array(business.length);
     var rest_urls = new Array(business.length);
     var phone = new Array(business.length);
-
+    //var catagories = new Array(business.length);
     //Filtering out useless data
     for (var i = 0; i < business.length; i++) {
         restaurant_name[i] = business[i].name;
@@ -45,9 +44,9 @@ async function rest_data() {
         rating[i] = business[i].rating;
         address[i] = business[i].location.address1;
         price[i] = business[i].price;
-        rest_urls[i] = business[i].price;
+        rest_urls[i] = business[i].url;
         //catagories[i] = business[i].catagories;
-        image_url[i] = business[i].url;
+        image_url[i] = business[i].image_url;
         phone[i] = business[i].phone;
     }
 
@@ -69,13 +68,13 @@ async function rest_data() {
         }
     }
     //Converting arrays into one CSV array
-    var csvContent = 'restaurant name,rating,address,price,image_url\r\n';
+    var csvContent = 'restaurant_name,rating,address,price,image_url,restaurant_url,restaurant_phone_number\r\n';
     for (i = 0; i < rating.length; i++) {
         var row = restaurant_name[i] + ',' + rating[i].toString() + ',' + address[i] + ',' + price[i] + ',' + image_url[i] + ',' + rest_urls[i] + ',' + phone[i];
         csvContent += row + '\r\n';
     }
 
-    //https://www.npmjs.com/package/csv-string
+    //https://www.npmjs.com/package/csv-string*
     const CSV = require('csv-string');
     console.log(csvContent);
     // const parsedCsv = CSV.parse(csvContent);
