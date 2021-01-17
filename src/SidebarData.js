@@ -1,6 +1,5 @@
 import React from 'react'
 import * as AiIcons from "react-icons/ai";
-import { isAuthenticated } from "./Page-LogIn"
 
 /* UPDATE THIS TO ADD MORE OPTIONS IN THE SIDEBAR*/
 export const SidebarData = [
@@ -19,12 +18,6 @@ export const SidebarData = [
     {
         title: 'Login',
         path: '/login',
-        icon: <AiIcons.AiOutlineLogout />,
-        cName: 'nav-text'
-    },
-    {
-        title: 'Logout',
-        path: '/logout',
         icon: <AiIcons.AiOutlineLogout />,
         cName: 'nav-text'
     }

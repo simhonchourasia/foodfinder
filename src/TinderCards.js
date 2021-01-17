@@ -15,9 +15,9 @@ export default class TinderCards extends Component {
         this.swipeLeft = this.swipeLeft.bind(this);
         this.swipeRight = this.swipeRight.bind(this);
         // HARDCODED userId (username: Albert)
-        //this.state = {userId: '6003c1d0f391200b6cfaa7dc', items: []};
+        this.state = {userId: '6003c1d0f391200b6cfaa7dc', items: []};
         // HARDCODED userId (username: Barbara)
-        this.state = {userId: '6003c1e5f391200b6cfaa7dd', items: []};
+        //this.state = {userId: '6003c1e5f391200b6cfaa7dd', items: []};
     }
 
     componentDidMount() {

@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { LoginForm } from "./LoginForm";
 
-
-export const { isAuthenticated } = (false);
-
 function LogIn() {
     /* const adminUser = {
         email: "admin@admin.com",
@@ -38,7 +35,6 @@ function LogIn() {
                     email: details.email,
                     password: details.password,
                 });
-                isAuthenticated = (true);
             } else if (i === users.length-1) {
                 console.log("Details do not match");
                 setError("Details do not match");

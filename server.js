@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(process.env.mongoURI, 
-    {userNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
+    {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true});
 
 const connection = mongoose.connection;
 connection.once('open', ()=>{
