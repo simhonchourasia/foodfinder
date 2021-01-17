@@ -44,8 +44,15 @@ export default class Matches extends Component{
             <div class="tiles">
                 {this.state.items.map(item=>{
                     return (<div className='tile'>
-                        <h4>{item.restaurant_name} | {item.rating} | {item.price} | {item.restaurant_url}</h4>
+                        <div className='match-text'>
+                        <h1>{item.restaurant_name}</h1>
+                        <ReactStars count={5} value={item.rating} isHalf={true} edit={false} activeColor="#ffd700" size={32}/>
+                        <h3>{item.price === undefined ? item.price : '$$'}</h3>
+                        </div>
+                        <a href={item.restaurant_url} class='match-item'>
                         <img src={item.image_url} alt=''/>
+                        </a>
+                        
                     </div>)
                 })}
             </div>
