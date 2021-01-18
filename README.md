@@ -1,3 +1,8 @@
+# FoodFïnder
+
+### Hack the North 2021 
+#### By Angela Du, Dylan Xiao, Rohan Batchu, and Simhon Chourasia
+
 ## Inspiration
 The inspiration for our project is mainly how indecisive we are as a group and our need to try new things! Earlier in the year, we, as a group, had spent almost **half an hour** deciding where to eat for lunch. Not the best usage of time, leading to the inspiration to build this app.
 
